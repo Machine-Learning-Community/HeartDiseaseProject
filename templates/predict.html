@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <div class="testbox1">
+        <form action="/predict" method="POST" target="_blank">
+          <div class="banner">
+            <h1>Prediction Results</h1>
+          </div>
+          <h2 style="text-align: center;">From the data provided</h2>
+  
+          <div class="prediction">
+            <div class="health">
+              {% if prediction [0]== 0 %}
+              <h3>You don't have Heart disease</h3>
+                <div class = "recomendations">
+                    <br></br>
+                    <h2 style="text-align: center;" class= "recom">You Are Doing Great!</h2>
+                    <h2 style="text-align: center;" class= "recom">Keep Up!</h2>
+                </div>
+              {% else %}
+                <br><h3>You might have Heart disease</h3>
+                <br>
+              <div class = "recomendations">
+                <h2 style="text-align: center;" class= "recom">Recommendations:</h2>
+                <ul>
+                  <li>Visit the hospital to be sure</li>
+                  <li>Do more physical activities</li>
+                  <li>Avoid alcohol, drugs and smoking</li>
+                </ul>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </form>
+      </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>

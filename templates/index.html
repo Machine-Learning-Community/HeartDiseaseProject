@@ -1,0 +1,93 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=Yes.No"/>
+    </head>
+
+    <body>
+        <center>
+        <h2>Heart Disease Prediction</h2>
+        <form method="POST", action="{{url_for('predict')}}" id='user_data'>
+            <input type="text", name='bmi', placeholder="BMI"> <br><br>
+            <input type="text", name='sleep', placeholder="Sleeping hours"> <br><br>
+                        
+            <div class="input-field col s12">
+                <select>
+                <option value="" disabled selected>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+                <label>Do you drink alcohol?</label>
+            </div>
+            <div class="input-field col s12">
+                <select>
+                <option value="" disabled selected>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+                <label>Do you smoke?</label>
+            </div>
+            <div class="input-field col s12">
+                <select>
+                <option value="" disabled selected>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+                <label>Are you diebetic?</label>
+            </div>
+            <div class="input-field col s12">
+                <select>
+                <option value="" disabled selected>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+                <label>Do you do physical activity?</label>
+            </div>
+            <div class="input-field col s12">
+                <select>
+                <option value="" disabled selected>Select</option>
+                <option value="Very good">Very good</option>
+                <option value="Good">Good</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+                </select>
+                <label>What is your general health status?</label>
+            </div>
+            <div class="input-field col s12">
+              <select>
+                  <option disabled selected value> Select</option>
+                  <option value="08-24">08-24</option>
+                  <option value="25-29">25-29</option>
+                  <option value="30-34">30-34</option>
+                  <option value="35-39">35-39</option>
+                  <option value="40-44">40-44</option>
+                  <option value="45-49">45-49</option>
+                  <option value="50-54">50-54</option>
+                  <option value="55-59">55-59</option>
+                  <option value="60-64">60-64</option>
+                  <option value="65-69">65-69</option>
+                  <option value="70-74">70-74</option>
+                  <option value="75-79">75-79</option>
+                  <option value="Yes2&lt;=">80&lt;=</option>
+              </select>
+                <label>Age Category</label>
+              </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <br>
+    <br>
+  
+    </center>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
+
